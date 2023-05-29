@@ -1,5 +1,5 @@
 * {
-    background-color: grey;
+    background-color: rgb(40, 38, 38);
     color: white;
 
 }
@@ -21,4 +21,15 @@
 
 .btn {
     background-color: rgb(66, 66, 151);
+}
+
+#avatar-img {
+    width: 100px;
+    height: 100px;
+}
+
+#clean-comment {
+    border-bottom: dashed;
+    border-color: rgb(66, 66, 151);
+
 }

@@ -1,36 +1,26 @@
 function clickMe() {
-    let username = document.getElementById('username').value;
-    let a = username.trim(username);
-    let usname = a[0].toUpperCase() + a.slice(1);
+
+    let username = document.getElementById("username");
+    console.log(username);
+    let a = username.value.trim(username);
+    console.log(a);
+    let usname = a.charAt(0).toUpperCase() + a.slice(1).toLowerCase();
+    console.log(usname);
+    let chat = document.getElementById("chat");
+    chat.innerHTML = usname;
 
 
-    const comment1 = checkSpam('buy ViAgRA now'); //результат buy *** now
-    const comment2 = checkSpam('free xxx'); //результат free ***
-    const comment3 = checkSpam("innocent rabbit"); //результат innocent rabbit
-
-    let comments = document.getElementById('comments').value;
-
-    function checkSpam() {
-        let comments = document.getElementById('comments').value;
-        let clean = comments.replace(/(xxx|viagra)/gi, "***");
-        comments.innerHTML = clean.value
-    }
-
-    //comments.innerHTML = comment1 | comment2 | comment3
-
-    let chat = document.getElementById('chat');
+    let comments = document.getElementById("comments");
+    let clean = comments.value.replace(/(xxx|viagra)/gi, "***");
+    let cleanComment = document.querySelector("#clean-comment");
+    cleanComment.innerHTML = clean;
 
 
-    let img = new Image(50, 50);
-    img.src = document.getElementById('avatar').value;
-    chat.before(img);
-
-    chat = img + " " + usname + " " + comments;
-
-
-    console.log(chat);
+    let imgSrc = document.getElementById("avatar");
+    document.querySelector("#avatar-img").src = imgSrc.value;
 
 }
+
 
 
 //задание со звёздочкой
