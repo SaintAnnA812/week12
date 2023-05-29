@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,27 +8,33 @@
     <link rel="stylesheet" href="./homework.css">
     <title>Maht</title>
 </head>
-<body>
-     <h1>Сервис комментариев со спам фильтром</h1>
-<div class="container">
 
-    <div class="container__form">
-        <h2 class="titles">Оставьте ваш комментарий</h2>
-     <form name="usernames" action="#" onsubmit="checkMe(this)" method="post"> 
-        <label for="usernames">Введите ваше ФИО:</label>
-        <p><input class="line" type="text" name="name" id="username"></p>
-        <label for="avatar">Введите ссылку вашего аватара:</label>
-        <p><input class="line" type="text" name="avatar" id="youravatar"></p>
-        <p>Оставьте комментарий:</p>
-        <textarea class="comments" name="comments" cols="30" rows="5"></textarea><br>
-        <p><input class="btn" type="submit" name="send" value="Отправить"></p>
-    </div>
-<div class="container__chat">
-        <h2 class="titles">Чат</h2>
-    </div>
+<body>
+    <h1>Сервис комментариев со спам фильтром</h1>
+    <div class="container">
+
+        <div class="container__form">
+            <h2 class="titles">Оставьте ваш комментарий</h2>
+            <form name="usernames" action="#" method="post">
+                <label for="username">Введите ваше ФИО:</label>
+                <p><input class="line" type="text" name="name" id="username"></p>
+                <label for="avatar">Введите ссылку <strong>вашего аватара</strong>:</label>
+                <p><input class="line" type="text" name="avatar" id="avatar">
+
+                </p>
+                <p>Оставьте комментарий:</p>
+                <textarea class="comments" name="comments" cols="30" rows="5" id="comments"></textarea><br>
+
+                <p><input class="btn" type="button" name="send" value="Отправить" onclick="clickMe()"></p>
+        </div>
+        <div class="container__chat">
+            <h2 class="titles">Чат</h2>
+            <p id="chat"></p>
+        </div>
     </div>
 
 
     <script src="homework.js"></script>
 </body>
+
 </html>

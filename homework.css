@@ -1,19 +1,24 @@
 * {
-    background-color: black;
+    background-color: grey;
     color: white;
 
 }
+
 .container {
     display: flex;
     gap: 100px;
 }
+
 .titles {
     color: rgb(66, 66, 151);
 }
-.comments, .line {
+
+.comments,
+.line {
     border-style: dashed;
- border-color: rgb(66, 66, 151);
+    border-color: rgb(66, 66, 151);
 }
+
 .btn {
-    background-color:rgb(66, 66, 151) ;
+    background-color: rgb(66, 66, 151);
 }
